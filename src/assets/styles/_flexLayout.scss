@@ -1,0 +1,47 @@
+.flex1{
+  display: flex;
+  flex-grow: 1;
+}
+.flexNone{
+  flex: 0 0 0;
+}
+.layoutRow{
+  display: flex;
+  flex-direction: row;
+}
+.layoutColumn{
+  display: flex;
+  flex-direction: column;
+}
+.layoutSpaceBetweenStart{
+  justify-content: space-between;
+  align-items: start;
+}
+.layoutSpaceBetweenCenter{
+  justify-content: space-between;
+  align-items: center;
+}
+.layoutSpaceBetweenEnd{
+  justify-content: space-between;
+  align-items: end;
+}
+.layoutStartCenter{
+  justify-content: start;
+  align-items: center;
+}
+.layoutCenterCenter{
+  justify-content: center;
+  align-items: center;
+}
+.layoutEndCenter{
+  justify-content: end;
+  align-items: center;
+}
+.layoutStartStart{
+  justify-content: start;
+  align-items: start;
+}
+.layoutCenterStart{
+  justify-content: center;
+  align-items: start;
+}

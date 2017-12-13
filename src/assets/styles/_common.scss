@@ -1,0 +1,55 @@
+@import "color";
+
+$onePixBorder: rem-calc(1px) solid $grey-e5;
+
+@mixin bgImg($imgUrl: "") {
+  background-image: url(#{$imgUrl});
+  background-color: $grey-e5;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+@mixin bgImgCover($imgUrl: "") {
+  background-image: url(#{$imgUrl});
+  background-color: $grey-e5;
+  background-size: cover;
+  background-position: center center;
+}
+
+.border-top-1px{
+  border-top: $onePixBorder;
+}
+
+.border-bottom-1px{
+  border-bottom: $onePixBorder;
+}
+.border-none{
+  border: none;
+}
+.submitBtn{
+  margin: rem-calc(34.5px) rem-calc(15px) 0;
+  height: rem-calc(45px);
+  line-height: rem-calc(45px);
+  border-radius: rem-calc(3px);
+  font-size: rem-calc(13px);
+  text-align: center;
+  font-size: rem-calc(18px);
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to right, #ff9c00, #ff5a00);
+}
+
+.submitBtnBottom{
+  position:absolute;
+  width:100%;
+  bottom:0;
+  height: rem-calc(50px);
+  line-height: rem-calc(50px);
+  // font-weight: bold;
+  font-size: rem-calc(18px);
+  text-align: center;
+  font-size: rem-calc(18px);
+  color: rgb(255, 255, 255);
+  // background-image: -webkit-linear-gradient(to left, #ff5a00, #ff9c00);
+background: linear-gradient(to right, #ff9c00, #ff5a00);
+  z-index:10;
+}

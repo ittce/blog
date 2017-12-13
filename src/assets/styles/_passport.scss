@@ -1,0 +1,140 @@
+@import "function";
+
+%ico {
+  width: rem-calc(14px);
+  height: rem-calc(17px);
+  background-image: url(~assets/images/passport/icon.png);
+  background-repeat: no-repeat;
+  background-size: rem-calc(14px) auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: rem-calc(6px);
+}
+
+.ico-mobile{
+  @extend %ico;
+  background-position: center 0;
+}
+.ico-password{
+  @extend %ico;
+  background-position: center rem-calc(-26px);
+}
+.ico-vfcode{
+  @extend %ico;
+  background-position: center rem-calc(-52px);
+}
+.ico-name{
+  @extend %ico;
+  background-position: center rem-calc(-78px);
+}
+.ico-salecode{
+  @extend %ico;
+  background-position: center rem-calc(-102px);
+}
+
+.view.login{
+  box-sizing: border-box;
+  padding: rem-calc(278px 42px 50px);
+  background: url(~assets/images/passport/login_bg.png) no-repeat top center;
+  // background-attachment: fixed;
+  background-size: contain;
+  overflow: hidden;
+  a{
+    color: #2f98ff;
+  }
+  .flex-box{
+    position: relative;
+    background-color: transparent;
+    label{
+      width: rem-calc(30px);
+    }
+  }
+}
+
+.view.forgetPwd{
+  .flex-box{
+    position: relative;
+    label{
+      width: rem-calc(30px);
+    }
+  }
+}
+
+.view.signup{
+  padding-bottom: 5rem;
+  .flex-box{
+    position: relative;
+    label{
+      width: rem-calc(26px);
+    }
+  }
+  // padding: 0 rem-calc(38px);
+  .identity{
+    background-color: #000;
+    // position: absolute;
+    width: 100%;
+    height: rem-calc(164px);
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 0;
+    text-align: center;
+    background: linear-gradient(90deg,#2cb7ff 0%, #0995ff 100%) no-repeat;
+    background-position: 0 -1px;
+    .item{
+      width: rem-calc(110px);
+      margin: 0 rem-calc(25px);
+      height: 100%;
+      font-size: rem-calc(16px);
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      color: #fff;
+      &:first-of-type{
+        .avatar{
+          background-position: 0 0;
+        }
+      }
+      &:last-of-type{
+        .avatar{
+          background-position: right 0;
+        }
+      }
+    }
+    .avatar{
+      width: rem-calc(85px);
+      height: rem-calc(85px);
+      margin: rem-calc(18px) auto rem-calc(10px);
+      border-radius: rem-calc(45px);
+      border-width: rem-calc(5px);
+      border-style: solid;
+      border-color: transparent;
+      background: url(~assets/images/passport/avatar.png) no-repeat;
+      background-size: rem-calc(176px) auto;
+      transition: border-color .3s ease;
+      box-sizing: content-box;
+      &:before{
+        content: '';
+        position: absolute;
+        bottom: rem-calc(-11px);
+        left: 50%;
+        background: url(~assets/images/passport/avatar.png) left bottom no-repeat;
+        background-size: rem-calc(175px) auto;
+        margin-left: rem-calc(-22px);
+        width: rem-calc(44px);
+        height: rem-calc(11px);
+        transition: bottom .2s ease;
+      }
+      &.actived{
+        border-color: #128ee4;
+        &:before{
+          bottom: 0;
+        }
+      }
+    }
+  }
+  .form{
+    width: percentage(582/750);
+    margin: rem-calc(12px) auto 0;
+  }
+}
