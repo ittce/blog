@@ -1,16 +1,18 @@
-import Vue from 'vue'
+import Vue from 'vue';
 import fastclick from 'fastclick';
-import App from './App'
-import router from './router'
+import App from './App';
+import router from './router';
 
-Vue.config.productionTip = false
+require('./assets/styles/fontawesome/font-awesome.scss');
+require('./assets/styles/global.scss');
+
+Vue.config.productionTip = false;
 
 fastclick.attach(document.body);
 
 /* eslint-disable no-new */
-export const root = new Vue({
+export default new Vue({
   el: '#app',
   router,
-  store,
-  render: h => h(App)
-})
+  render: h => h(App),
+});
