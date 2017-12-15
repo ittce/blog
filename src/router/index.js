@@ -1,15 +1,19 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from 'src/pages/home';
 
 Vue.use(Router);
+
+/* eslint-disable global-require */
 
 export default new Router({
   routes: [
     {
       path: '/',
       name: 'Home',
-      component: Home,
+      component: resolve => require.ensure(
+        [],
+        () => resolve(require('src/pages/home')
+      ))
     },
   ],
 });

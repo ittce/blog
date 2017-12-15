@@ -1,53 +1,64 @@
 <template>
-	<section class="postShorten-group main-content-wrap">
+  <section
+  class="postShorten-group main-content-wrap">
     <article
       v-for="(article, $index) in articles"
       :key="article.id"
       :class="['postShorten', `postShorten--thumbnailimg-${$index === 0 ? 'bottom': 'left'}`]">
-			<div class="postShorten-wrap">
-				<div class="postShorten-header">
-					<h1 class="postShorten-title" itemprop="headline">
-						<a class="link-unstyled" :href="article.href">
-							{{article.title}}
-						</a>
-					</h1>
-					<div class="postShorten-meta">
-						<time itemprop="datePublished" datetime="2015-06-15T13:30:05-07:00">
-							{{article.publishTime}}
-						</time>
-						<span>in </span>
-            <template v-for="(category, $i) in article.categories">
+      <div
+      class="postShorten-wrap">
+        <div class="postShorten-header">
+          <h1
+            class="postShorten-title"
+            itemprop="headline">
+            <a
+              class="link-unstyled"
+              :href="article.href">
+              {{ article.title }}
+            </a>
+          </h1>
+          <div class="postShorten-meta">
+            <time
+              itemprop="datePublished"
+              datetime="2015-06-15T13:30:05-07:00">
+              {{ article.publishTime }}
+            </time>
+            <span>in </span>
+            <template v-for="(category, $i) in article.categories ">
               <a
                 :key="category.title"
                 class="category-link"
                 :href="category.href">
-							  {{category.title}}
-						  </a>
-              {{$i + 1 === article.categories.length ? '' : ','}}
+                {{ category.title }}
+              </a>
+              {{ $i + 1 === article.categories.length ? '' : ',' }}
             </template>
-					</div>
-				</div>
-				<div class="postShorten-excerpt" itemprop="articleBody">
-					<p>{{article.desc}}
-						<br>
-						<a
+          </div>
+        </div>
+        <div
+          class="postShorten-excerpt"
+          itemprop="articleBody">
+          <p>
+            {{ article.desc }}
+            <br>
+            <a
               :href="article.href"
               class="postShorten-excerpt_link link">
-							Continue reading
-						</a>
-					</p>
-				</div>
-			</div>
-			<a :href="article.href">
-				<div class="postShorten-thumbnailimg">
-					<img
-          alt=""
-          itemprop="image"
-          :src="article.iconUrl">
-				</div>
-			</a>
-		</article>
-	</section>
+              Continue reading
+            </a>
+          </p>
+        </div>
+      </div>
+      <a :href="article.href">
+        <div class="postShorten-thumbnailimg">
+          <img
+            alt=""
+            itemprop="image"
+            :src="article.iconUrl">
+        </div>
+      </a>
+    </article>
+  </section>
 </template>
 
 <script>
@@ -122,7 +133,7 @@ export default {
               href: '/hexo-theme-tranquilpeak/categories/tranquilpeak/features/'
             }
           ]
-        },
+        }
       ]
     };
   }
